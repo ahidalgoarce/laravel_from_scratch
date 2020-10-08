@@ -55,3 +55,34 @@ Then create a new table named posts and some messages to show later in our contr
 Then we go to PostController from app/http/Controllers, and create a controller for posts.
 ![alt text](./resources/database_1.png "Laravel default page")
 This controller will allow the usage and consumption directly from the database to create posts.
+
+
+## Views 
+
+Steps for structuring views in a layout design pattern:
+
+1. We need to make a structure from the views that we have in the project. For this we can create a layout file.
+2. Then we got the unique HTML tags and structure in our layout file, since that code is the reusable layout through the site.
+3. Afterwards we can do `@extends ('layout')` for extending or inherite the layout structure to the rest of views.
+4.`@yield ('content)` we can use for replacing it with a section of content from a view that were created byb `@section('content') <h1>Hola Mundoo</h1> @endsection.` By this way we are dynamically replacing data in the layout structure.
+##
+
+## Forms
+
+We have a list of actions:
+
+1. create - Shows a view to create a new resource
+2. store - Persist the new resource
+3. edit - Show a view to edit a existing resource
+4. update - Persist the edited resource
+5. destroy - Destroy method for resource
+6. show - Show a single resource
+7. list - Show multiple resources
+
+
+`$php artisan make:controller ProjectsController -r -m Project`
+This creates the scaffold for the 7 Actions
+`-m` is for base in a model, so now we are also creating a data model for this kind of resource.
+
+For Routing a Controller and this 7 actions, we can use the Routing request channel for getting the specific action.
+##
