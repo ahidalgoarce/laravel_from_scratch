@@ -4,3 +4,4 @@
 * [Installation guide](/start.md)
 * [Routing](/routing.md)
 * [Controllers Techniques](/controllers.md)
+* [Mail](/mail.md)
