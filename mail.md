@@ -80,3 +80,39 @@ Route::get('/contact', 'ContactController@show')->name('contact.show');
 Route::post('/contact', 'ContactController@store')->name('contact.store');
 ```
 
+# Simulate an Inbox using Mailtrap
+
+### Mailtrap 
+Mailtrap is a test mail server solution that allows testing email notifications without sending them to the real users of your application. Not only does Mailtrap work as a powerful email test tool, it also lets you view your dummy emails online, forward them to your regular mailbox, share with the team and more! Mailtrap is a mail server test tool built by Railsware Products, Inc., a premium software development consulting company.
+
+
+![alt text](./resources/mailtrap.png)
+
+### Configuration
+Go to your .env file and change the mail server data to: 
+```
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=fb22f157538226
+MAIL_PASSWORD=45879a006bbc3a
+MAIL_ENCRYPTION=tls
+```
+FYI: set your corresponding credentials here
+
+Just go to your SMPT settings and choose laravel as the desired integration, or either the one you need, then you'll get the required configutation.
+
+![alt text](./resources/smtp.png)
+
+
+# Send an email
+After correctly configuring smtp you can enter contacts view and send an email, after that check your inbox in mailtrap, you should get something like this:
+
+![alt text](./resources/email-mailtraptxt.png)
+
+<br>
+<br>
+<br>
+
+And for HTML:
+![alt text](./resources/mailtrap-html.png)
